@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	
 var coffeeSources = ['components/coffee/copyright.coffee'];	
 var jsSources = [
+	'components/scripts/meylo.js',
 	'components/scripts/copyright.js',
 	'components/scripts/ilightbox.packed.js',
 	'components/scripts/jquery.mousewheel.js',
