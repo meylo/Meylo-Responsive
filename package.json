@@ -6,5 +6,9 @@
     "type": "git",
     "url": "?.git"
   },
-  "author": "Meylo Rodriguez"
+  "author": "Meylo Rodriguez",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-util": "^3.0.0"
+  }
 }
