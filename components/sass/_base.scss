@@ -1,0 +1,31 @@
+$base-font-size: 15px;
+$base-line-height: 24px;
+@include establish-baseline;
+
+body{
+	background: $faintgray;
+}
+
+p{
+	margin: 0 0 15px 0;
+	color: $gray;
+}
+
+#frost h2 {background: url('../../images/headers/frost-bank-logo.gif') bottom left no-repeat;}
+#shiner h2 {background: url('../../images/headers/shiner-logo.gif') bottom left no-repeat;}
+#whataburger h2 {background: url('../../images/headers/whataburger-logo.gif') bottom left no-repeat;}
+#costadelmar h2 {background: url('../../images/headers/costa-del-mar-logo.gif') bottom left no-repeat;}
+#morestuff h2 {background: url('../../images/headers/more-stuff.gif') bottom left no-repeat;}
+
+.myButton {
+	@include border-radius(5px, 5px);
+	font-family: $roboto;
+	background-color:#79d6f5;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding:6px 20px;
+	text-decoration:none;
+	margin: 0 0 30px 0;
+}

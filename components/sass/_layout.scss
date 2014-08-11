@@ -1,0 +1,262 @@
+// Susy Grid
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$phone:320px;
+$girlcar:500px;
+$carguys:600px;
+$twennis:700px;
+$desktop:960px;
+
+
+// phone layout -------------------------------------------------
+@include breakpoint($phone){
+	header {
+		text-align: center;
+	
+		.logo {
+		width: 40%;
+		max-width: 240px;
+		margin: 20px auto 10px auto;
+		}
+		
+		.nav {
+		background: $skyblue;
+		text-align: center;
+		padding-top: 10px;
+		
+		
+		ul {
+		@include horizontal-list;
+		display: inline-block;
+	
+	
+		li a {
+			font-family: $roboto;
+			color:$white;
+			text-decoration: none;
+			text-transform: uppercase; 
+			font-size: 16px;
+			padding: 0 0 0 6px;
+			line-height: 0px;
+			}
+		}
+		}	
+	}
+	
+	.container {
+		padding: 0% 8% 0% 8% ;
+	}
+	
+	section:not(:last-of-type) {
+		border-bottom: 1px dashed $lightgray;
+		margin: 0 0 20px 0;		
+	}
+	
+	
+	h2 {
+		color: $skyblue;
+		margin: 25px 0 12px 0;
+		height:44px;
+		width:142px;
+		overflow: hidden;
+		text-indent: -9000px;
+		cursor: pointer;
+	}
+	
+	footer {
+	  padding: 4%;
+	  background: $skyblue;
+	  text-align: center;
+	
+	  ul.social {
+	      @include horizontal-list;
+	      display: inline-block;
+	
+	      li a {
+	         color: white;
+	      }       
+	  }
+	
+	  .copyright {
+	    padding: 2% 4%;
+	    font-family: $arbutus;
+	    font-size: small;
+	    color: $white;
+	  }
+	}
+	
+	.scrollToTop{
+		@include opacity(0.4);
+		color: $gray;
+		text-decoration: none;
+		position:fixed;
+		bottom:20px;
+		right:20px;
+		display:none;
+	}
+	.scrollToTop:hover{
+		text-decoration:none;
+	}
+	
+}
+
+//$girlcar:500px;
+//$carguys:600px;
+//$twennis:700px;
+
+// girlcar layout -------------------------------------------------
+@include breakpoint($girlcar){
+body {
+  background: #000 url('../../images/bgs/girlcar.jpg') center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+	
+	section {
+		border-bottom: none;
+	}
+	
+	.scrollToTop, header, .container, footer { display: none;}
+		
+}	
+
+// carguys layout -------------------------------------------------
+@include breakpoint($carguys){
+body {
+  background: #000 url('../../images/bgs/carguys.jpg') center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+}
+
+// twennis layout -------------------------------------------------
+@include breakpoint($twennis){
+body {
+  background: #000 url('../../images/bgs/twennis.jpg') center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+}
+
+
+// desktop layout -------------------------------------------------
+@include breakpoint($desktop){
+	body{
+		@include container(95%);
+		background: $faintgray;
+	}
+	
+	header, .container { display: block;}
+	
+	// Frame --------------------------------------
+	#top, #bottom, #left, #right {
+		background: $skyblue;
+		position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 10px;
+	}
+	#left { left: 0; }
+	#right { right: 0; }
+			
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 10px;
+	}
+	#top { top: 0; }
+	#bottom { bottom: 0; }
+	
+	// Header --------------------------------
+	header {
+		float: left;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		
+		.logo {
+		width: 80%;
+		max-width: 140px;
+		margin: 0;
+		}
+		
+		.nav {
+		background: $trans;
+		text-align: left;
+		padding: 0;
+		
+		ul {
+		@include horizontal-list;
+		display: inline-block;	
+	
+		li a {
+			font-family: $roboto;
+			color:$skyblue;
+			text-decoration: none;
+			text-transform: uppercase; 
+			font-size: 14px;
+			padding: 0 0 0 6px;
+			line-height: 0px;
+			}
+		}
+		}
+
+	}
+	
+	.container {
+	  @include vertical-align;
+	}
+	h2 {
+		margin: 0 auto 13px auto
+	}
+	
+	section {
+		@include span(4);	
+		text-align: center;
+		border-bottom: none!important;
+	}
+	
+	section:not(:first-of-type) {
+		border-left: 1px dashed $lightgray;
+	}
+	
+	section:nth-child(4)
+	{
+		border-left: none;
+
+	}
+	
+	footer {
+	 	display: block;
+	 	padding: 0;
+	 	background: $trans;
+	 	position: fixed;
+	 	float: right;
+	 	bottom: 26px;
+	 	right: 37px;
+	
+	  ul.social {
+	      @include horizontal-list;
+	      padding: 0;
+	      //display: inline-block;
+	
+	      li a {
+	         color: $skyblue;
+	      }       
+	  }
+	
+	  .copyright {
+	    display: none;
+	  }
+	}
+			
+}	
+	
+	

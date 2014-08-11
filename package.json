@@ -1,0 +1,10 @@
+{
+  "name": "MeyloResponsive",
+  "version": "0.2.1",
+  "description": "Making portfolio site mobile friendly",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Meylo Rodriguez"
+}
