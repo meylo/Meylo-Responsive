@@ -32,10 +32,11 @@ if (env==='development') {
 
 coffeeSources = ['components/coffee/tagline.coffee'];
 jsSources = [
-  'components/scripts/rclick.js',
-  'components/scripts/pixgrid.js',
-  'components/scripts/tagline.js',
-  'components/scripts/template.js'
+  'components/scripts/ilightbox.packed.js',
+  'components/scripts/jquery.mousewheel.js',
+  'components/scripts/copyright.js',
+  'components/scripts/jquery.requestAnimationFrame.js',
+  'components/scripts/meylo.js',
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
