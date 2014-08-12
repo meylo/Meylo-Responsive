@@ -31,7 +31,7 @@ body {
 
 
 // phone layout -------------------------------------------------
-@include breakpoint($phone){
+@include breakpoint($phone){b
 	header {
 		text-align: center;
 	
